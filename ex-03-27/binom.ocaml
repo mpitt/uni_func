@@ -1,0 +1,10 @@
+let binom n k =
+  let rec fact m =
+    if m=0 then 1
+    else m*fact(m-1) in
+  (fact n)/((fact (n-k))*(fact k));;
+
+print_string "binom 6 2\n";;
+print_string(string_of_int (binom 6 2));;
+
+print_string "\n";;
