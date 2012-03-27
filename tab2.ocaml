@@ -1,0 +1,16 @@
+exception NegativeNumber;;
+
+let rec tab_2 n =
+  if n<0 then raise NegativeNumber
+  else if n=0 then ""
+  else (tab_2 (n-1))^" "^(string_of_int (2*n));;
+
+print_string "tab_2 7\n";;
+print_string (tab_2 7);;
+
+print_string "\n";;
+
+print_string "tab_2 (-3)\n";;
+print_string (tab_2 (-3));;
+
+print_string "\n";;
