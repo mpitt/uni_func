@@ -1,0 +1,9 @@
+let rec row n =
+  if n=0 then ""
+  else (row (n-1))^" "^(string_of_int n);;
+
+let rec pyramid n =
+  if n=0 then ""
+  else (pyramid (n-1))^"\n"^(row n);;
+
+print_string (pyramid 5);;
